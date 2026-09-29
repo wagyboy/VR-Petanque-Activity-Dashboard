@@ -12,7 +12,11 @@ Assignment 3 demonstrates automated README updates, GitHub Actions checks, and i
 ## Recent repository activity
 
 <!-- ACTIVITY:START -->
-Activity has not been generated yet.
+- 2026-09-29 — Add GitHub Actions workflow to update README ([e63a848](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/e63a848af0cfe0e55c8309a986f23bd2aa8b824e))
+- 2026-09-29 — Create .gitignore ([eebcdc7](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/eebcdc7a33ec3d814d2e8871d75b812aabb55864))
+- 2026-09-29 — Add files via upload ([0290bdb](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/0290bdbdd75a1b5dea1e76b9a6ac71d3ae94f4f7))
+- 2026-09-29 — Update README.md ([e86442e](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/e86442e37f84a404489db9157dab534c463e5668))
+- 2026-09-29 — Initial commit ([2811589](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/2811589d1b0c3f7b86784a06f984788df47920de))
 <!-- ACTIVITY:END -->
 
 ## Verification

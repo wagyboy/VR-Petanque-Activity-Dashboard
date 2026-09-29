@@ -1,0 +1,42 @@
+name: Validate README and preview
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - scripts/**
+      - tests/**
+      - .github/workflows/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate actual README markers
+        run: python scripts/update_readme.py --validate-only
+      - name: Preview default-branch activity using proposed code
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: python scripts/update_readme.py --preview --ref "$DEFAULT_BRANCH"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: readme-preview
+          path: artifacts/
+          retention-days: 14
+          if-no-files-found: error

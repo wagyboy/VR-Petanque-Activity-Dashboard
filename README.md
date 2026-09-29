@@ -17,7 +17,7 @@ Assignment 3 demonstrates automated README updates, GitHub Actions checks, and i
 - 2026-09-29 — Create .gitignore ([eebcdc7](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/eebcdc7a33ec3d814d2e8871d75b812aabb55864))
 - 2026-09-29 — Add files via upload ([0290bdb](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/0290bdbdd75a1b5dea1e76b9a6ac71d3ae94f4f7))
 - 2026-09-29 — Update README.md ([e86442e](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/e86442e37f84a404489db9157dab534c463e5668))
-
+<!-- ACTIVITY:END -->
 ## Verification
 
 Run `python -m unittest discover -s tests -v` and `python scripts/update_readme.py --validate-only`.

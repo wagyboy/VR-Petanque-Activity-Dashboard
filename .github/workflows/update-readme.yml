@@ -1,0 +1,74 @@
+name: Update README activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 1 * * *'
+
+# This limits GITHUB_TOKEN. The PAT has its own repository-limited permissions.
+permissions:
+  contents: read
+
+concurrency:
+  group: readme-activity-writer
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate actual README markers
+        run: python scripts/update_readme.py --validate-only
+      - name: Generate activity from checked-out snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/update_readme.py --ref "$(git rev-parse HEAD)"
+      - name: Commit README only when changed
+        env:
+          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- README.md; then
+            echo 'No content change; no commit created.'
+            echo '- update_commit_created: false' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ -z "$REPO_TOKEN" ]; then
+            echo 'REPO_TOKEN is missing. Add the repository secret.'
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- README.md
+          git commit -m 'chore(readme): refresh repository activity [skip ci]'
+          askpass="$RUNNER_TEMP/a3-askpass.sh"
+          trap 'rm -f "$askpass"' EXIT
+          cat > "$askpass" <<'ASKPASS'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' 'x-access-token' ;;
+            *Password*) printf '%s\n' "$REPO_TOKEN" ;;
+          esac
+          ASKPASS
+          chmod 700 "$askpass"
+          GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git push origin HEAD:main
+          echo '- update_commit_created: true' >> "$GITHUB_STEP_SUMMARY"
+          echo "- update_commit_sha: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: readme-update-evidence
+          path: artifacts/
+          retention-days: 14
+          if-no-files-found: error

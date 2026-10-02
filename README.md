@@ -1,5 +1,8 @@
 # VR Petanque Activity Dashboard
 
+[![README update](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/actions/workflows/update-readme.yml/badge.svg?branch=main)](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/actions/workflows/update-readme.yml)
+[![README validation](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/actions/workflows/validate-readme.yml/badge.svg?branch=main)](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/actions/workflows/validate-readme.yml)
+
 Assignment 3 demonstrates automated README updates, GitHub Actions checks, and issue-linked delivery. This repository contains automation and documentation; it does not implement a playable game.
 
 ## How it works

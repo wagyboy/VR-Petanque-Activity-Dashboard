@@ -15,11 +15,11 @@ Assignment 3 demonstrates automated README updates, GitHub Actions checks, and i
 ## Recent repository activity
 
 <!-- ACTIVITY:START -->
+- 2026-10-02 — Merge pull request #3 from wagyboy/a3-evidence-runtime-polish ([ffa5869](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/ffa58697b5a5fdd9a55fdc46f8ca7639e76a6413))
+- 2026-10-02 — docs: verify scheduled runs and token boundary ([bfcddae](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/bfcddaefa6b2802c1db7d815c10e487328095910))
+- 2026-10-02 — ci: pin Node 24 actions and runner ([ca7c27d](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/ca7c27d6f76b30b19bacc3b466b94050646d306d))
+- 2026-10-02 — docs: add workflow status badges ([3947a9d](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/3947a9d9d93a22c4acf134bad26166d5d5a178dc))
 - 2026-09-29 — docs: record A3 workflow and delivery evidence ([5f174ca](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/5f174ca1493b1c25c580a6f4589fa1b5e6ffa1e0))
-- 2026-09-29 — Merge pull request #2 from wagyboy/a3-01-readme-validation ([589a2fc](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/589a2fcac2e7c0a0dbc3580915b50260503520c5))
-- 2026-09-29 — fix: restore README end marker ([58c931c](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/58c931cc0e78a19c5abdeb6177c1a140ca306113))
-- 2026-09-29 — test: demonstrate missing README end marker ([c5a18fb](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/c5a18fb40587dc8f914a218fd5ed52d22093ba0e))
-- 2026-09-29 — ci: add README validation and preview ([c28b188](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/c28b188de22c31889749cec0a0a863c23f077f8c))
 <!-- ACTIVITY:END -->
 ## Verification
 

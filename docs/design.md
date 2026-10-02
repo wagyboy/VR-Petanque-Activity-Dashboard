@@ -24,4 +24,12 @@ The writer has no push trigger. Its commit includes [skip ci], preventing redund
 
 ## Limitations and improvements
 
-The example uses major-version action tags, not immutable SHA pins. For stronger supply-chain controls, review and pin action SHAs and maintain them through dependency updates. API retry/backoff is not implemented: failures are bounded and visible. Scheduled operation is not a timing SLA. Artifacts expire after 14 days; preserve report evidence separately. No performance improvement is claimed without measurements.
+The workflows pin checkout, setup-python, and upload-artifact to reviewed full commit SHAs. upload-artifact uses v7.0.1 on Node 24. The runner is ubuntu-24.04, avoiding implicit migration of ubuntu-latest. Review dependency updates regularly rather than treating pins as permanent. API retry/backoff is not implemented: failures are bounded and visible. Scheduled operation is not a timing SLA. New artifacts request retention for 90 days (subject to repository policy); this does not extend older artifacts that requested 14 days. Artifacts still expire; preserve report evidence separately. No performance improvement is claimed without measurements.
+
+## Merge controls and grading access
+
+This assignment retains its direct README push architecture. The main branch has no required status checks or mandatory PR rule. A failed PR check provides feedback but does not enforce a merge block. Do not describe this repository as having enforced branch protection. Enabling mandatory PRs later requires migrating the writer to an update-PR model and reviewing permissions first.
+
+The project board was private when the evidence screenshots were captured. Repository, issue, PR and run links provide public evidence; board screenshots remain in the report. No project visibility change is part of this maintenance update.
+
+Status badges report workflow outcomes on main. They do not measure test coverage, code quality, or correctness of requirements.

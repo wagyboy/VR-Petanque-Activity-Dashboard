@@ -15,11 +15,11 @@ Assignment 3 demonstrates automated README updates, GitHub Actions checks, and i
 ## Recent repository activity
 
 <!-- ACTIVITY:START -->
+- 2026-10-02 — docs: finalize A3 maintenance evidence ([4dfa177](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/4dfa1774244446edef69eb35120c69853e50616a))
 - 2026-10-02 — Merge pull request #3 from wagyboy/a3-evidence-runtime-polish ([ffa5869](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/ffa58697b5a5fdd9a55fdc46f8ca7639e76a6413))
 - 2026-10-02 — docs: verify scheduled runs and token boundary ([bfcddae](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/bfcddaefa6b2802c1db7d815c10e487328095910))
 - 2026-10-02 — ci: pin Node 24 actions and runner ([ca7c27d](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/ca7c27d6f76b30b19bacc3b466b94050646d306d))
 - 2026-10-02 — docs: add workflow status badges ([3947a9d](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/3947a9d9d93a22c4acf134bad26166d5d5a178dc))
-- 2026-09-29 — docs: record A3 workflow and delivery evidence ([5f174ca](https://github.com/wagyboy/VR-Petanque-Activity-Dashboard/commit/5f174ca1493b1c25c580a6f4589fa1b5e6ffa1e0))
 <!-- ACTIVITY:END -->
 ## Verification
 

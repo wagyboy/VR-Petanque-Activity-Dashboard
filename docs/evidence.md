@@ -77,7 +77,9 @@ No baseline for manual effort was collected, so no time-saving or productivity p
 
 ## Follow-up maintenance
 
-The proposed maintenance updates pin Actions to full SHAs, use upload-artifact v7.0.1 (Node 24), select ubuntu-24.04, request 90-day retention for new artifacts, and add workflow status badges. New runs must verify these changes after implementation; older screenshots accurately retain their original warnings.
+Maintenance was completed through PR #3. Actions are pinned to full commit SHAs, upload-artifact uses v7.0.1 with Node.js 24, the runner uses ubuntu-24.04, and new artifacts request 90-day retention. Two workflow status badges were added.
+
+The updated PR validation passed. After merge, the updated writer ran successfully and created README update commit d8c5abc. Older screenshots document the original workflow version.
 
 The repository intentionally retains direct pushes and does not enforce required checks. The private project board remains documented by screenshots.
 
